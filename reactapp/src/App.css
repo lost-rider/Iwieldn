@@ -1,0 +1,288 @@
+/* body{
+  
+} */
+.rowC {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  /* background-image: linear-gradient(
+    to bottom right,
+    white,
+    rgba(255, 255, 255, 0.702),
+    rgb(131, 198, 221)
+  ); */
+}
+.navbar {
+  display: none;
+}
+/* The side navigation menu */
+.sidebar {
+  margin-top: 6vh;
+  width: 20 vw;
+  /* background-image: linear-gradient(
+    rgba(34, 84, 40, 0.801),
+    rgba(224, 181, 29, 0.973)
+  ); */
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 21%, rgba(0,212,255,1) 100%);
+  
+  /* position: fixed; */
+  height: 88vh;
+}
+.sidebarcontainer {
+  display: flex;
+}
+.sidebarcontainer img {
+  width: 20px;
+  height: 20px;
+  margin: 17px;
+  align-self: flex-start;
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(247, 240, 240);
+  padding: 8px;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+.sidebar a .true{
+  font-weight: 600;
+  color: black;
+}
+.sidebarhead h4 {
+  padding: 5px;
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+  color: aliceblue;
+}
+.sidebar hr {
+  width: 70%;
+  color: white;
+  margin: auto;
+}
+
+/* Sidebar links */
+
+/* Active/current link */
+/* .sidebar a.active {
+  background-color: #10bd1eda;
+  color: white;
+} */
+
+/* Links on mouse-over */
+/* :not(.active) */
+.sidebar a:hover:not(.true){
+  color: rgb(220, 213, 213);
+}
+
+/* Pages */
+/* About Pages */
+.Page {
+  /* height: 90vh; */
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.Page2 {
+  margin: 5px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Page p {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+.pagecontainer {
+  width: 70vw;
+  margin: auto;
+}
+.pagecontainer img {
+  height: 79vh;
+  width: 82vw;
+}
+.ManualPage{
+  height: 100vh;
+  width:100vw;
+  background-color: rgba(19, 45, 53, 0.406);
+}
+.ManualPdf {
+  height: 90vh;
+  width: 90vw;
+  margin: auto;
+}
+.text-logo {
+  display: flex;
+  flex-direction: row;
+}
+.text-logo img {
+  width: 50px;
+  height: 40px;
+  margin-left: 6vw;
+}
+.Page2 .box {
+  width: 40vw;
+  height: 30vh;
+  background-color: rgba(169, 169, 169, 0.365);
+  margin-top: 3px;
+  margin-left: 10px;
+}
+.pagebuttons {
+  width: 65vw;
+  margin: auto;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.pageimage {
+  height: 80vh;
+  width: 65vw;
+  /* margin: auto;
+  background-color: beige; */
+}
+.pageimage img {
+  /* position: absolute; */
+  right: 100px;
+  top: 10px;
+  height: 80vh;
+  width: 68vw;
+}
+
+.contactinfo {
+  margin: 20px;
+}
+
+.contactinfo .name {
+  padding-top: 30px;
+  width: 40vw;
+}
+.contactinfo .email {
+  padding-top: 30px;
+  width: 40vw;
+}
+.contactinfo .phone {
+  padding-top: 50px;
+  width: 20vw;
+}
+.contactinfo .check {
+  padding: 18px 0;
+}
+.contactinfo .enquiry {
+  padding: 20px 0;
+  width: 40vw;
+}
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 1420px) {
+  .sidebar {
+    width: 25vw;
+    height: 88vh;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  .Page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-content: space-between; */
+  }
+  .Previous {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 20px;
+  }
+  .Next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 900px) {
+  .rowC {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(
+      to bottom right,
+    white,
+    rgba(255, 255, 255, 0.702),
+    rgb(101, 58, 227)
+    );
+  }
+  .sidebar {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .navbar .navbar-brand{
+    font-size:x-large;
+  }
+  .navbar .nav-link{
+    text-align: center;
+  }
+  .navbar .nav-item {
+    margin: 2px 4px;
+  }
+  .navbar .true{
+    background-color: rgba(0, 162, 255, 0.191);
+  }
+  .Page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .pagecontainer {
+    width: 200vw;
+  }
+  .pagecontainer img {
+    width: 200vw;
+    height: 50vh;
+  }
+  .pagebuttons {
+    width: 85vw;
+
+    padding-bottom: 2px;
+    display: flex;
+  }
+  .pageimage {
+    margin-top: 20px;
+    
+    height: 65vh;
+    width: 85vw;
+    /* background-color: beige; */
+  }
+  .pageimage img {
+    height: 65vh;
+    width: 85vw;
+  }
+  .Previous {
+    position: fixed;
+    bottom: 5;
+    left: 0;
+  }
+  .Next {
+    position:;
+    top : 100px;  
+    right: 0;
+  }
+  .text-logo img {
+    width: 30px;
+    height: 30px;
+    margin-left: 3vw;
+  }
+}

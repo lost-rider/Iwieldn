@@ -1,0 +1,6 @@
+cd/
+virtualenv env3
+env3\Scripts\activate
+pip install django
+cd registration-main
+python manage.py runserver

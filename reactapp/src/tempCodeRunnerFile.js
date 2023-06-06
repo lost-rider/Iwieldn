@@ -1,0 +1,1 @@
+import UploadandDetectionPage from "./components/UploadandDetectionPage";

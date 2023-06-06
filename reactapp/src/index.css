@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* background: url(https://img.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_53876-129794.jpg?w=1596&t=st=1685300948~exp=1685301548~hmac=5619cb86fef1e1d2cb32c2cc238969af54a40986b4affba4756edbcf08e0ce72) ; */
+  background: url(https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1560&h=750&dpr=1);
+  background-size: 1600px 850px;
+  background-repeat: no-repeat;
+  
+  
+
+  
+}
+
+
+code {
+  font-family: monospace;
+}
