@@ -126,10 +126,37 @@
   height: 40px;
   margin-left: 6vw;
 }
+.box {
+  margin-top: 20px;
+}
+
+.box input[type='file'] {
+  display:block;
+}
+
+.box label {
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.progress-bar {
+  height: 20px;
+  background-color: #007bff;
+}
+
+.progress-bar-label {
+  font-weight: bold;
+  color: #000;
+}
+
 .Page2 .box {
   width: 40vw;
-  height: 30vh;
-  background-color: rgba(169, 169, 169, 0.365);
+  height: 15vh;
+  background-color: rgba(46, 46, 46, 0.365);
   margin-top: 3px;
   margin-left: 10px;
 }
@@ -177,6 +204,9 @@
   padding: 20px 0;
   width: 40vw;
 }
+
+
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 1420px) {
   .sidebar {
@@ -210,6 +240,7 @@
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 900px) {
+  
   .rowC {
     height: 100vh;
     width: 100vw;
@@ -276,13 +307,14 @@
     left: 0;
   }
   .Next {
-    position:;
+    position:fixed;
     top : 100px;  
     right: 0;
   }
   .text-logo img {
     width: 30px;
-    height: 30px;
+    height: 50px;
     margin-left: 3vw;
   }
 }
+

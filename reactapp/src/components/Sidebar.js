@@ -42,13 +42,16 @@ const Sidebar = (props) => {
               <a className={`${props.isUD}`} href="#about">Uploading & Detection</a>
             </Link>
           </div>
+          
         </div>
         <div className="sidebarcontainer">
           <div className="image">
             <img src={require("../images/logo2.png")} alt="info" />
           </div>
           <div className="text">
-            <a className={`${props.isRR}`} href="#about">Results & Report Generation</a>
+            <Link to="/Result">
+              <a className={`${props.isRR}`} href="#about">Results & Report Generation</a>
+            </Link>  
           </div>
         </div>
         <hr />

@@ -1,12 +1,14 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import "./App.css";
+import "./pages/api/index.tsx";
 import Sidebar from "./components/Sidebar";
 import AboutiWeldPage from "./components/AboutiWeldPage";
 import AboutCoeamtPage from "./components/AboutCoeamtPage";
 import CoeamtPage from "./components/CoeamtPage";
 import Contact from "./components/Contact";
 import DownloadManual from "./components/DownloadManual";
+import Result from "./components/Result";
 import UploadandDetectionPage from "./components/UploadandDetectionPage";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -19,7 +21,7 @@ function App() {
           {/* <Navbar /> */}
           {/* <Sidebar /> */}
           <Routes>
-            <Route exact path="" element={<AboutiWeldPage />}></Route>
+            <Route exact path="/" element={<AboutiWeldPage />}></Route>
             <Route
               exact
               path="/AboutCoeamtPage"
@@ -31,6 +33,10 @@ function App() {
               exact
               path="/UploadandDetectionPage" element={<UploadandDetectionPage/>}
             ></Route>
+            <Route
+              exact
+              path="/Result" element={<Result/>}
+            ></Route>            
             <Route
               exact
               path="/DownloadManual" element={<DownloadManual />}

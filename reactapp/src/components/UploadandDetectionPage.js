@@ -4,10 +4,49 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 // import axios from "axios";
-// import { ProgressBar } from "react-bootstrap";
+import "../index.tsx";
+import { ProgressBar } from 'react-bootstrap';
 // import { Link } from "react-router-dom";
 
+
+// let files = [...e.target.files.slice(0, 4)]
+import axios from "axios";
+
+
 const UploadandDetectionPage = () => {
+  // const [uploadPercentage, setUploadPercentage] = useState(0);
+
+  // const handleFileUpload = async (e) => {
+  //   const files = Array.from(e.target.files);
+  //   const totalFiles = files.length;
+
+  //   for (let i = 0; i < totalFiles; i++) {
+  //     const file = files[i];
+  //     const formData = new FormData();
+  //     formData.append('file', file);
+
+  //     try {
+  //       const response = await axios.post('/upload', formData, {
+  //         onUploadProgress: (progressEvent) => {
+  //           const percentage = Math.round(
+  //             (progressEvent.loaded * 100) / progressEvent.total
+  //           );
+
+  //           setUploadPercentage(percentage);
+  //         },
+  //       });
+
+  //       console.log('Upload response:', response.data);
+  //     } catch (error) {
+  //       console.error('Upload error:', error);
+  //     }
+  //   }
+
+  //   setUploadPercentage(0);
+  // };
+
+
+
   // const [uploadPercentage, setUploadPercentage] = useState(0);
   return (
     <div className="rowC">
@@ -18,7 +57,7 @@ const UploadandDetectionPage = () => {
         isRR="false"
         isContact="false"
       />
-      <Navbar isGUI="false" isCoeamt="false" isUD="true" isRR="false" isContact="false"/>
+      <Navbar isGUI="false" isCoeamt="false" isUD="true" isRR="false" isContact="false" />
       <div className="Page2">
         <div className="uploadimage">
           <div className="text-logo">
@@ -29,20 +68,11 @@ const UploadandDetectionPage = () => {
             <img src={require("../images/upload-logo.png")} alt="info" />
           </div>
           <p>Uploading files :</p>
+
           <div className="box">
-            {/* <input
-            type="file"
-            className="form-control profile-pic-uploader"
-            onChange={uploadFile}
-          />
-          {uploadPercentage > 0 && (
-            <ProgressBar
-              now={uploadPercentage}
-              active
-              label={`${uploadPercentage}%`}
-            />
-          )} */}
+            <input type="file" multiple accept="*/dicom,.dcm, image/dcm, */dcm, .dicom" onChange={handleUpload} />
           </div>
+
           <p>Uploading status :</p>
         </div>
         <div className="detection">
@@ -50,36 +80,38 @@ const UploadandDetectionPage = () => {
             <div className="text">
               <h6>Step 1(b) : Detection</h6>
             </div>
-            <img src={require("../images/search.jpg")} alt="info" />
+            <img src={require("../images/search.png")} alt="info" />
           </div>
-          <div className="box"></div>
+          <div className="box">
+
+          </div>
           <p>Detection status :</p>
           <div class="container">
-    <h1>Enter the welding parameters</h1>
-    <form action="noaction.php">
-   <div class="formgrp">
-    <input type="text" name="" placeholder="Length of object"></input>
-   </div>
+            <h1>Enter the welding parameters</h1>
+            <form action="noaction.php">
+              <div class="formgrp">
+                <input type="text" name="" placeholder="Length of object"></input>
+              </div>
 
-   <div class="formgrp">
-    <input type="text" name="" placeholder="Position of joint"></input>
-   </div>
+              <div class="formgrp">
+                <input type="text" name="" placeholder="Position of joint"></input>
+              </div>
 
-   <div class="formgrp">
-    <input type="text" name="" placeholder="Shape of object"></input>
-   </div>
+              <div class="formgrp">
+                <input type="text" name="" placeholder="Shape of object"></input>
+              </div>
 
 
-  
-  <button class="btn">Submit</button>
-    </form>
-</div>
+
+              <button class="btn">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
 
-  
+
   );
 };
 
